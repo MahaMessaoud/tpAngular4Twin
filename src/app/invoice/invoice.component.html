@@ -1,0 +1,11 @@
+<div *ngIf="idFacture != null && active == true">
+  <h2>Détails de la facture</h2>
+  <p>Numéro de facture : {{ idFacture }}</p>
+  <p>Facture active : {{ active ? 'Oui' : 'Non' }}</p>
+
+</div>
+<div *ngIf="active == false">
+<h1>Impossible de visualiser les détails
+  de la facture</h1>
+</div>
+<input type="button" value="Retour" (click)="retour()" >

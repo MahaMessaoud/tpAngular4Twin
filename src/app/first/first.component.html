@@ -1,0 +1,15 @@
+<p>first works!</p>
+
+<h1>{{klass }}</h1>
+<hr>
+<input type="submit" (click)="sayHello()" value="Hello">
+<div [style.backgroundColor]="kolor">
+text
+</div>
+<input type="text" #t appChangeColor>
+<input type="submit" (click)="changeColor(t.value)" value="Hello">
+<!-- with two way -->
+<div appChangeColor class="container"
+>directive
+</div>
+<input  type="text" appChangeColor >

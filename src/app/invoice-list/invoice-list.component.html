@@ -1,0 +1,8 @@
+
+<div *ngFor="let l of invoiceList; let i=index">
+  Facture :   {{l.idFacture}}
+  <input type="button" value="Details" [routerLink]="['/mainInvoice/invoice', l.idFacture, l.active]" />
+
+ </div>
+
+

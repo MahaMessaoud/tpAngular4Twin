@@ -1,0 +1,25 @@
+<p>products works!</p>
+<div *ngFor="let product of listProducts">
+  <div *ngIf="product.quantity == 10">
+    <h1>{{product.id}}</h1>
+    <h2>{{product.price}}</h2>
+    <h2>{{product.like}}</h2>
+
+    <hr>
+ <input type="submit" value="click" (click)="increaseLike(product)" >
+  <hr>
+ </div>
+<hr>
+<hr>
+<hr>
+</div>
+<div *ngFor="let product of listProducts">
+  <div *ngIf="product.title == nameOfproducts || nameOfproducts==' ' ">
+    <h1>{{product.id}}</h1>
+    <h2>{{product.title}}</h2>
+    <hr>
+
+  <hr>
+ </div>
+
+</div>

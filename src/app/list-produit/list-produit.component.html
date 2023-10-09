@@ -1,0 +1,16 @@
+<div *ngFor="let u of listproduits; let i=index">
+  {{ u.idProduit }}
+  {{ u.code }}
+  {{ u.prixUnitaire }}
+  {{ u.tauxTVA }}
+  <!-- <div *ngIf="u.tauxTVA == 0.02">
+    <input type="submit" value="AjusterTVA" [disabled]="true" />
+  </div>
+  <div *ngIf="u.tauxTVA != 0.02">
+    <input type="submit" value="AjusterTVA" [disabled]="false" />
+  </div> -->
+    <input type="submit" value="AjusterTVA" [disabled]="u.tauxTVA == 0.02" (click)="calculTVA(i)"/>
+    <div *ngIf="j===i">le tauxTVA modifié</div>
+</div>
+ <input type="text" id="productCode" [(ngModel)]="productCode">
+
